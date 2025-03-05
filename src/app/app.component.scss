@@ -14,6 +14,8 @@
     }
     .title {
       margin: 0;
+      font-weight: 700;
+      color: s.$DarkPurple;
     }
   }
   .accordions-container {
@@ -21,20 +23,26 @@
       margin: 1.5rem 0;
       .question {
         display: flex;
-        .icon {
-          display: block;
-          width: 60px;
-          height: 30px;
-          background-image: url("../../public/assets/images/icon-plus.svg");
-        }
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        font-weight: 600;
+        color: s.$DarkPurple;
+      }
+      .text {
+        color: rgba($color: s.$GrayishPurple, $alpha: 1);
+        line-height: 1.5rem;
       }
     }
     .accordion[open] {
       .question {
         .icon {
-          background-image: url("../../public/assets/images/icon-minus.svg");
+          content: url("../../public/assets/images/icon-minus.svg");
         }
       }
+    }
+    .line {
+      border-color: rgba($color: s.$GrayishPurple, $alpha: 0.1);
     }
   }
 }
