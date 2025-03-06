@@ -24,6 +24,18 @@ body {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   background-image: url("../public/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-width: 600px) {
+    background-image: url("../public/assets/images/background-pattern-desktop.svg");
+    background-size: auto auto;
+  }
+  @media (min-width: 1200px) {
+    background-size: contain;
+  }
+  app-root {
+    margin: auto;
+  }
 }
