@@ -30,6 +30,11 @@
         gap: 2rem;
         font-weight: 600;
         color: s.$DarkPurple;
+        transition: color 0.1s;
+        &:hover {
+          cursor: pointer;
+          color: s.$ElectricPurple;
+        }
       }
       .text {
         color: rgba($color: s.$GrayishPurple, $alpha: 1);
@@ -37,14 +42,32 @@
       }
     }
     .accordion[open] {
+      max-height: 100rem;
       .question {
         .icon {
           content: url("../../public/assets/images/icon-minus.svg");
         }
       }
     }
-    .line {
-      border-color: rgba($color: s.$GrayishPurple, $alpha: 0.1);
-    }
+  }
+  .line {
+    border: 1px solid s.$GrayishPurple;
+    opacity: 0.1;
+  }
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  .img {
+    width: 1.5rem;
+  }
+  .text {
+    font-weight: 600;
+    color: s.$DarkPurple;
+  }
+  .line {
+    border-color: rgba($color: s.$GrayishPurple, $alpha: 0.1);
   }
 }
